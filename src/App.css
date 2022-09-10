@@ -1,38 +1,139 @@
-.App {
+html{
+  scroll-behavior:smooth;
+  position: relative;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.header .bg-image{
+  background-image: url("/src/components/xu-qijing.jpg");
+  height: 100vh;
+  background-size: cover;
+  position:relative;
+  filter:blur(6px);
+  overflow-y: hidden;
+}
+/*@media screen and (max-width: 768px) {
+  .bg-text{
+    margin-top: 3rem;
+    width: 50%;
+    left: 50%;
+    transform: translate(-50%,-100%);
+    text-align: center;
+    color: aliceblue;
+    font-weight:600;
+    box-shadow: 10px 10px 30px black;
+    padding: 5rem;
+    border: 2px solid white;
+    border-radius: 10px;
+    text-shadow: 1px 1px 3px black;
+  }
+  .header .bg-image{
+    background-image: url("/src/components/xu-qijing.jpg");
+    height: 100vh;
+    background-size: cover;
+    position:relative;
+    filter:blur(6px);
+    overflow-y: hidden;
+  }
+  .content {
+    left: 50%;
+    top: 50%;
+    transform: trans
+  }
+  
+}*/ /*resposiveness under construction*/
+
+.bg-text{
+  width: 70%;
+  position: relative;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%,-220%);
   text-align: center;
+  color: aliceblue;
+  font-weight:600;
+  box-shadow: 10px 10px 30px black;
+  padding: 3rem;
+  border: 2px solid white;
+  border-radius: 10px;
+  text-shadow: 1px 1px 3px black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bg-text a{
+  color: aliceblue;
+  font-size: 2rem;
+  padding: 1rem;
+  color:rbga(255,255,255,7);
+  text-shadow: 1px 1px 3px black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.bg-text .ani:hover{
+  display: inline-block;
+  animation: wobble 2s infinite;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+*::-webkit-scrollbar {
+  width: 8px;
 }
 
-.App-link {
-  color: #61dafb;
+*::-webkit-scrollbar-track {
+  background-color: #bcb6b6;
+  border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+*::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-image: linear-gradient(17deg, rgba(42,90,246,0.2), rgba(11,135,133,0.9));
+  box-shadow:inset 2px 2px 5px 0 rgba(255, 255, 255, 0.5);
+}
+
+.content{
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  color: aliceblue;
+  font-size: 1rem;
+  text-shadow: 1px 1px 3px black;
+}
+
+
+.content {
+  position: relative;
+  padding: 3rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -270%);
+}
+.content p {
+  margin: 0 0 20px;
+}
+
+/* Arrow & Hover Animation */
+#more-arrows {
+  width: 75px;
+  height: 65px;
+}
+#more-arrows:hover polygon {
+  fill: #FFF;
+  transition: all 0.2s ease-out;
+}
+#more-arrows:hover polygon.arrow-bottom {
+  transform: translateY(-18px);
+}
+#more-arrows:hover polygon.arrow-top {
+  transform: translateY(18px);
+}
+
+polygon {
+  fill: #FFF;
+  transition: all 0.2s ease-out;
+}
+polygon.arrow-middle {
+  opacity: 0.75;
+}
+polygon.arrow-top {
+  opacity: 0.5;
 }
