@@ -30,16 +30,17 @@ export const NavLink = styled(Link)`
 export const Bars = styled(FaBars)`
   display: none;
   color: black;
-  @media screen and (max-width: 768px) {
+
+  }
+`;
+/*  @media screen and (max-width: 768px) {
     display: block;
     position: absolute;
     top: 0;
     right: 0;
     transform: translate(-100%, 75%);
     font-size: 1.8rem;
-    cursor: pointer;
-  }
-`;
+    cursor: pointer;*/
 
 export const NavMenu = styled.div`
   display: flex;
@@ -50,10 +51,12 @@ export const NavMenu = styled.div`
   /* Third Nav */
   /* width: 100vw;
   white-space: nowrap; */
-  @media screen and (max-width: 768px) {
-    display: none;
   }
 `;
+/*
+  @media screen and (max-width: 768px) {
+    display: none;
+*/
 
 export const NavBtn = styled.nav`
   display: flex;

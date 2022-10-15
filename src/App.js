@@ -12,7 +12,7 @@ function App() {
     <Router>
       <Navbar />
         <Routes>
-        <Route path='/' element={<Home/>}/>
+        <Route path='/' element={<Home Myname='Sankar Gopan' city='Hyderabad'/>}/>
         <Route path='/about' element={<about/>} />
         <Route path='/contact' element={<contact/>} />
         <Route path='*' element={<pagenotFound/>} />

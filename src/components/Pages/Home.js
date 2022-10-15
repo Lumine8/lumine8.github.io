@@ -10,8 +10,8 @@ export class home extends PureComponent {
         <div className='bg-image'> </div>
         <div className='bg-text'>
   
-          <h1>Hey, it's me Sankar!</h1>
-          <h2>I'm a freelancing college student, based in Hyderabad.</h2>
+          <h1>Hey, it's me {this.props.Myname}</h1>
+          <h2>I'm a freelancing college student, based in {this.props.city}.</h2>
           <a href='https://github.com/Lumine8' target={'_blank'}><AiOutlineGithub className='ani'/></a> <a href='https://www.instagram.com/luminepanda/' target={'_blank'}><AiOutlineInstagram className='ani'/></a> <a href='https://www.linkedin.com/in/sankar-gopan-5660a1141/' target={'_blank'}><AiOutlineLinkedin className='ani'/></a> <a href='mailto:sankargopan1@gmail.com' target={'_blank'}><AiOutlineMail className='ani'/></a>
   
         </div>
