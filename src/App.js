@@ -1,23 +1,13 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes,} from "react-router-dom";
+import scrollElement from 'react-scroll/modules/mixins/scroll-element';
 import './App.css';
-
-import Navbar from './components/navbar';
 import Home from './components/Pages/Home';
 
 function App() {
   console.log('responsiveness under construction!')
   return (
     <>
-    <Router>
-      <Navbar />
-        <Routes>
-        <Route path='/' element={<Home Myname='Sankar Gopan' city='Hyderabad'/>}/>
-        <Route path='/about' element={<about/>} />
-        <Route path='/contact' element={<contact/>} />
-        <Route path='*' element={<pagenotFound/>} />
-        </Routes>
-    </Router>
+    <Home/>
     </>
       
   );
